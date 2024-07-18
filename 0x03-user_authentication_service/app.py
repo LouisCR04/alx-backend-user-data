@@ -2,10 +2,6 @@
 # app.py
 
 """ User_Auth """
-
-#!/usr/bin/env python3
-""" Flask app
-"""
 from flask import Flask, jsonify, request, abort, redirect, url_for
 from auth import Auth
 from typing import Union
