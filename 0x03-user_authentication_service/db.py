@@ -2,9 +2,6 @@
 # db.py
 
 """ User_Auth """
-
-#!/usr/bin/env python3
-""" Database for ORM """
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
