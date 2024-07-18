@@ -2,10 +2,21 @@
 # main.py
 
 """ User_Auth """
+from auth import Auth
 
-from user import User
+email = 'me@me.com'
+password = 'mySecuredPwd'
 
-print(User.__tablename__)
+auth = Auth()
 
-for column in User.__table__.columns:
-    print("{}: {}".format(column, column.type))
+try:
+    user = auth.register_user(email, password)
+    print("successfully created a new user!")
+except ValueError as err:
+    print("could not create a new user: {}".format(err))
+
+try:
+    user = auth.register_user(email, password)
+    print("successfully created a new user!")
+except ValueError as err:
+    print("could not create a new user: {}".format(err))
